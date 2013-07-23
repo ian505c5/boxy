@@ -1,0 +1,91 @@
+/* CSS declarations go here */
+/* line 3, myApp.scss */
+.box {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+}
+/* line 8, myApp.scss */
+.box img {
+  height: 200px;
+}
+
+/* line 13, myApp.scss */
+.box-container.container {
+  padding: 81px 0 0 0;
+}
+
+/* line 17, myApp.scss */
+.topbar-container {
+  position: fixed;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+}
+/* line 23, myApp.scss */
+.topbar-container h1 {
+  float: left;
+  color: #FFF;
+  margin: 0 20px 0 0;
+}
+
+/* line 29, myApp.scss */
+.topbar {
+  padding: 20px 0;
+}
+/* line 33, myApp.scss */
+.topbar input, .topbar select {
+  float: left;
+}
+/* line 36, myApp.scss */
+.topbar input#videourl, .topbar input#linkurl, .topbar select#videourl, .topbar select#linkurl {
+  display: none;
+}
+/* line 41, myApp.scss */
+.topbar #submitBox, .topbar .login-container {
+  float: left;
+}
+/* line 45, myApp.scss */
+.topbar #submitBox input {
+  margin-left: 10px;
+}
+/* line 48, myApp.scss */
+.topbar #submitBox select {
+  width: 100px;
+}
+/* line 52, myApp.scss */
+.topbar .login-container {
+  float: right;
+}
+/* line 54, myApp.scss */
+.topbar .login-container p, .topbar .login-container form {
+  float: left;
+}
+
+/* line 60, myApp.scss */
+.login-container {
+  color: #FFF;
+}
+
+/* line 65, myApp.scss */
+footer ul {
+  float: right;
+}
+
+/* line 71, myApp.scss */
+.welcome-page .wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+/* line 75, myApp.scss */
+.welcome-page .welcome-form {
+  color: #FFF;
+  background: #888;
+  display: inline-block;
+  padding: 20px;
+}
+/* line 81, myApp.scss */
+.welcome-page .welcome-form input {
+  margin-bottom: 10px;
+}

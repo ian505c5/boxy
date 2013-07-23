@@ -1,0 +1,85 @@
+/* CSS declarations go here */
+
+.box {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	float: left;
+	img {
+		height: 200px;
+	}
+}
+
+.box-container.container {
+	padding: 81px 0 0 0;
+}
+
+.topbar-container{
+	position: fixed;
+	width: 100%;
+	background: #000;
+	z-index: 1;
+
+	h1 {
+		float: left;
+		color: #FFF;
+		margin: 0 20px 0 0;
+	}
+}
+.topbar {
+
+	padding: 20px 0;
+
+	input, select {
+		float: left;
+
+		&#videourl, &#linkurl {
+			display: none;
+		}
+	}
+
+	#submitBox, .login-container {
+		float: left;
+	}
+	#submitBox {
+		input {
+			margin-left: 10px;
+		}
+		select {
+			width: 100px;
+		}
+	}
+	.login-container {
+		float: right;
+		p, form {
+			float: left;
+		}
+	}
+}
+
+.login-container {
+	color: #FFF;
+}
+
+footer {
+	ul {
+		float: right;
+	}
+}
+
+.welcome-page {
+	.wrapper {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.welcome-form {
+		color: #FFF;
+		background: #888;
+		display: inline-block;
+		padding: 20px;
+
+		input {
+			margin-bottom: 10px;
+		}
+	}
+}
