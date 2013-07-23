@@ -75,7 +75,7 @@ table {
 
 body {
 	background: #fff;
-	font: 14px/1.5 Helvetica, Arial, sans-serif;
+	font: 14px/1.5 'Quattrocento Sans', Helvetica, Arial, sans-serif;
 	color: #333;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -104,7 +104,7 @@ h1, h2, h3 {
 	margin-bottom: 20px;
 }
 h4, h5, h6 {
-	line-height: 1.2;
+	line-height: 1;
 	margin-bottom: 10px;
 }
 h1 { font-size: 40px; }
@@ -133,7 +133,12 @@ hr { border: 0; border-top: 1px solid #ccc; display: block; height: 1px; margin:
 /* ==========================================================================
 	Links
 ========================================================================== */
-
+a {
+	color: #002228;
+}
+a:hover {
+	color: #6e6e6e;
+}
 
 
 /* ==========================================================================

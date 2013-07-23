@@ -1,20 +1,20 @@
 <head>
-  <title>Chat</title>
+  <title>Boxy</title>
+  <link href='http://fonts.googleapis.com/css?family=Ropa+Sans|Quattrocento+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<div class="topbar-container">
-		<div class="container">
-			<div class="topbar clearfix">
-				<a href="/"><h1>Boxy</h1></a>
-			</div>
-			<ul>
+	<header>
+		<div class="container clearfix">
+			<a href="/"><h1>Boxy</h1></a>
+			<ul class="main-nav">
+				<li><a href="/rooms">View Rooms</a></li>
 				<li><a href="/create">Create Room</a></li>
 				<li><a href="/signout">Sign out</a></li>
 			</ul>
 		</div>
-	</div>
-	{{renderPage}}
+	</header>
+		{{renderPage}}
 	<footer class="container">
 		<ul>
 			<li>&copy; Ian Mathews, 2013</li>

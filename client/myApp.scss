@@ -1,35 +1,57 @@
 /* CSS declarations go here */
+$lightgrey: #6e6e6e;
+$darkgrey: #333;
 
 .box {
+	box-shadow: 5px 5px 10px 1px #d3d3d3;
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
 	float: left;
+	margin: 5px;
 	img {
 		height: 200px;
 	}
 }
 
-.box-container.container {
-	padding: 81px 0 0 0;
-}
-
-.topbar-container{
-	position: fixed;
+header {
 	width: 100%;
-	background: #000;
-	z-index: 1;
+	border-bottom: 2px solid $lightgrey;
+	padding: 25px 0;
+	position: relative;
 
 	h1 {
 		float: left;
-		color: #FFF;
+		color: #000;
+		font-size: 82px;
 		margin: 0 20px 0 0;
 	}
+	.main-nav {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+		li {
+			float: left;
+			margin-right: 10px;
+		}
+	}
 }
-.topbar {
+.content {
+	padding: 40px 0;
+}
+.entrybar {
 
 	padding: 20px 0;
-
+	background: $darkgrey;
+	h4, form {
+		float: left;
+	}
+	h4 {
+		color: #FFF;
+		font-size: 30px;
+		margin-right: 20px;
+	}
 	input, select {
 		float: left;
 
@@ -38,9 +60,6 @@
 		}
 	}
 
-	#submitBox, .login-container {
-		float: left;
-	}
 	#submitBox {
 		input {
 			margin-left: 10px;
@@ -49,19 +68,10 @@
 			width: 100px;
 		}
 	}
-	.login-container {
-		float: right;
-		p, form {
-			float: left;
-		}
-	}
 }
 
-.login-container {
-	color: #FFF;
-}
-
-footer {
+footer.container {
+	padding: 20px 0;
 	ul {
 		float: right;
 	}
@@ -69,16 +79,18 @@ footer {
 
 .welcome-page {
 	.wrapper {
+		h1 {
+			margin: 0;
+		}
 		width: 600px;
 		margin: 0 auto;
+		text-align: center;
 	}
 	.welcome-form {
-		color: #FFF;
-		background: #888;
 		display: inline-block;
 		padding: 20px;
-
 		input {
+			border: 2px solid $lightgrey;
 			margin-bottom: 10px;
 		}
 	}

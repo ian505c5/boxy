@@ -1,13 +1,18 @@
 <template name="entry">
-	<form id="submitBox" class="clearfix">
-		<select id="box-type">
-			<option value="image">Image</option>
-			<option value="video">Video</option>
-			<option value="link">link</option>
-		</select>
-		<input type="text" id="imageurl" class="input-type" placeholder="Image url">
-		<input type="text" id="videourl" class="input-type" placeholder="Video url">
-		<input type="text" id="linkurl" class="input-type" placeholder="Link url">
-		<input type="submit" value="Submit">
-	</form>
+	<div class="entrybar clearfix">
+		<div class="container">
+			<h4>Add Box</h4>
+			<form id="submitBox" class="clearfix">
+				<select id="box-type">
+					<option value="image">Image</option>
+					<option value="video">Video</option>
+					<option value="link">link</option>
+				</select>
+				<input type="text" id="imageurl" class="input-type" placeholder="Image url">
+				<input type="text" id="videourl" class="input-type" placeholder="Youtube url">
+				<input type="text" id="linkurl" class="input-type" placeholder="Link url">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
 </template>

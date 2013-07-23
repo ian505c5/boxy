@@ -1,9 +1,13 @@
 <template name="rooms">
-	<ul>
-		<h1>Rooms</h1>
-		{{#each rooms}}
-			<a href="rooms/{{_id}}"><p>{{name}}</p></li>
-			<li><p>{{description}}</p></li>
-		{{/each}}
-	</ul>
+	<div class="content">
+		<div class="container clearfix">
+			<ul class="rooms-list">
+				<h1>Rooms</h1>
+				{{#each rooms}}
+					<li><a href="rooms/{{_id}}">{{name}}</a></li>
+					<li><p>{{description}}</p></li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
 </template>

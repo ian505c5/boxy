@@ -1,15 +1,17 @@
 <template name="boxes">
-	{{#each boxes}}
-		<div class="box">
-			{{#if typeIs "image"}}
-				<a href="{{imageurl}}"><img src="{{imageurl}}"></a>
-			{{/if}}
-			{{#if typeIs "link"}}
-				<a href="{{linkurl}}"><img width="200" alt="link" style="background: lightblue;"></a>
-			{{/if}}
-			{{#if typeIs "video"}}
-				<iframe class="youtube-player" type="text/html" width="200" height="200" src="{{videourl}}" frameborder="0" allowfullscreen>
-			{{/if}}
-		</div>
-	{{/each}}
+	<div class="content">
+		{{#each boxes}}
+			<div class="box">
+				{{#if typeIs "image"}}
+					<a href="{{imageurl}}"><img src="{{imageurl}}"></a>
+				{{/if}}
+				{{#if typeIs "link"}}
+					<a href="{{linkurl}}"><img width="200" alt="link" style="background: lightblue;"></a>
+				{{/if}}
+				{{#if typeIs "video"}}
+					<iframe class="youtube-player" type="text/html" width="200" height="200" src="//www.youtube.com/embed/{{videourl}}?rel=0" frameborder="0" allowfullscreen>
+				{{/if}}
+			</div>
+		{{/each}}
+	</div>
 </template>

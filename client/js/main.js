@@ -1,6 +1,5 @@
 Meteor.startup(function(){
   changeMediaTypes();
-  var root_url = ROOT_URL;
 })
 
 

@@ -1,91 +1,108 @@
 /* CSS declarations go here */
-/* line 3, myApp.scss */
+/* line 5, myApp.scss */
 .box {
+  box-shadow: 5px 5px 10px 1px #d3d3d3;
   width: 200px;
   height: 200px;
   overflow: hidden;
   float: left;
+  margin: 5px;
 }
-/* line 8, myApp.scss */
+/* line 12, myApp.scss */
 .box img {
   height: 200px;
 }
 
-/* line 13, myApp.scss */
-.box-container.container {
-  padding: 81px 0 0 0;
-}
-
 /* line 17, myApp.scss */
-.topbar-container {
-  position: fixed;
+header {
   width: 100%;
-  background: #000;
-  z-index: 1;
+  border-bottom: 2px solid #6e6e6e;
+  padding: 25px 0;
+  position: relative;
 }
 /* line 23, myApp.scss */
-.topbar-container h1 {
+header h1 {
   float: left;
-  color: #FFF;
+  color: #000;
+  font-size: 82px;
   margin: 0 20px 0 0;
 }
-
 /* line 29, myApp.scss */
-.topbar {
-  padding: 20px 0;
+header .main-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
 }
-/* line 33, myApp.scss */
-.topbar input, .topbar select {
+/* line 34, myApp.scss */
+header .main-nav li {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 40, myApp.scss */
+.content {
+  padding: 40px 0;
+}
+
+/* line 43, myApp.scss */
+.entrybar {
+  padding: 20px 0;
+  background: #333333;
+}
+/* line 47, myApp.scss */
+.entrybar h4, .entrybar form {
   float: left;
 }
-/* line 36, myApp.scss */
-.topbar input#videourl, .topbar input#linkurl, .topbar select#videourl, .topbar select#linkurl {
+/* line 50, myApp.scss */
+.entrybar h4 {
+  color: #FFF;
+  font-size: 30px;
+  margin-right: 20px;
+}
+/* line 55, myApp.scss */
+.entrybar input, .entrybar select {
+  float: left;
+}
+/* line 58, myApp.scss */
+.entrybar input#videourl, .entrybar input#linkurl, .entrybar select#videourl, .entrybar select#linkurl {
   display: none;
 }
-/* line 41, myApp.scss */
-.topbar #submitBox, .topbar .login-container {
-  float: left;
-}
-/* line 45, myApp.scss */
-.topbar #submitBox input {
+/* line 64, myApp.scss */
+.entrybar #submitBox input {
   margin-left: 10px;
 }
-/* line 48, myApp.scss */
-.topbar #submitBox select {
+/* line 67, myApp.scss */
+.entrybar #submitBox select {
   width: 100px;
 }
-/* line 52, myApp.scss */
-.topbar .login-container {
-  float: right;
-}
-/* line 54, myApp.scss */
-.topbar .login-container p, .topbar .login-container form {
-  float: left;
-}
 
-/* line 60, myApp.scss */
-.login-container {
-  color: #FFF;
+/* line 73, myApp.scss */
+footer.container {
+  padding: 20px 0;
 }
-
-/* line 65, myApp.scss */
-footer ul {
+/* line 75, myApp.scss */
+footer.container ul {
   float: right;
 }
 
-/* line 71, myApp.scss */
+/* line 81, myApp.scss */
 .welcome-page .wrapper {
   width: 600px;
   margin: 0 auto;
+  text-align: center;
 }
-/* line 75, myApp.scss */
+/* line 82, myApp.scss */
+.welcome-page .wrapper h1 {
+  margin: 0;
+}
+/* line 89, myApp.scss */
 .welcome-page .welcome-form {
-  color: #FFF;
-  background: #888;
   display: inline-block;
   padding: 20px;
 }
-/* line 81, myApp.scss */
+/* line 92, myApp.scss */
 .welcome-page .welcome-form input {
+  border: 2px solid #6e6e6e;
   margin-bottom: 10px;
 }
