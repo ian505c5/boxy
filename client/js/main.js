@@ -1,5 +1,4 @@
 Meteor.startup(function(){
-  changeMediaTypes();
 })
 
 

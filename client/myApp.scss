@@ -95,3 +95,21 @@ footer.container {
 		}
 	}
 }
+
+.create-room {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	h2 {
+		margin-bottom: 0;
+	}
+	form {
+		padding: 20px;
+		display: inline-block;
+		margin: 0 auto;
+	}
+	input {
+		border: 2px solid $lightgrey;
+		margin-bottom: 10px;
+	}
+}

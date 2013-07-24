@@ -106,3 +106,25 @@ footer.container ul {
   border: 2px solid #6e6e6e;
   margin-bottom: 10px;
 }
+
+/* line 99, myApp.scss */
+.create-room {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 103, myApp.scss */
+.create-room h2 {
+  margin-bottom: 0;
+}
+/* line 106, myApp.scss */
+.create-room form {
+  padding: 20px;
+  display: inline-block;
+  margin: 0 auto;
+}
+/* line 111, myApp.scss */
+.create-room input {
+  border: 2px solid #6e6e6e;
+  margin-bottom: 10px;
+}

@@ -1,13 +1,10 @@
+Meteor.subscribe("rooms");
+
 Template.rooms.rooms = function(){
   //             WHERE CLAUSE    PARAMETERS
   return Rooms.find({}, { sort: {time: -1} });
 };
 
-Template.room.boxes = function(){
-  //             WHERE CLAUSE    PARAMETERS
-  var curRoom = Session.get('currentRoomId');
-  return Boxes.find({ roomId: curRoom }, { sort: {time: -1} });
-};
 // Returns an event_map key for attaching "ok/cancel" events to
 // a text input (given by selector)
 var okcancel_events = function (selector) {
@@ -44,11 +41,9 @@ Template.create_room.events[okcancel_events('#createRoom')] = make_okcancel_hand
       var ts = Date.now() / 1000;
 
       //ADD ABOVE DATA TO COLLECTION, TEXT IS PASSED IN
-      Rooms.insert({ creator: user, name: roomName.value, description: roomDesc.value, time: ts });
-
-      //CLEAR THE INPUTS
-      roomName.value = "";
-      roomDesc.value = "";
+      Rooms.insert({ creator: user, name: roomName.value, description: roomDesc.value, time: ts }, function(err,result){
+        Meteor.Router.to('/rooms/'+result);
+      });
     } 
   }
 });

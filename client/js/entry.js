@@ -23,7 +23,20 @@ var make_okcancel_handler = function (options) {
   };
 };
 
-Template.entry.events = {};
+Template.entry.events = {
+  'change #box-type': function(event){
+    if ($('#box-type').val() == "image") {
+      $('#imageurl').show();
+      $('#submitBox').find('.input-type:not(#imageurl)').hide();
+    } else if ($('#box-type').val() == "video") {
+      $('#videourl').show();
+      $('#submitBox').find('.input-type:not(#videourl)').hide();
+    } else if ($('#box-type').val() == "link") {
+      $('#linkurl').show();
+      $('#submitBox').find('.input-type:not(#linkurl)').hide();
+    }
+  }
+};
 
 Template.entry.events[okcancel_events('#submitBox')] = make_okcancel_handler({
   ok: function (text, event) {
@@ -38,11 +51,12 @@ Template.entry.events[okcancel_events('#submitBox')] = make_okcancel_handler({
 
       var regex = /http:\/\/(www.)?youtube\.com\/watch\?v=([A-Za-z0-9._%-]*)(\&\S+)?/  
       var html = fullUrl.replace(regex, '$2');
-      var vidUrl = html;
+      var url = html;
 
     } else if (type.value == "link") {
       var url = $('#linkurl').val();
     }
+
     var roomId = Session.get('currentRoomId');
     var user = Meteor.user().username;
     //VALIDATION LOL
@@ -50,7 +64,7 @@ Template.entry.events[okcancel_events('#submitBox')] = make_okcancel_handler({
       var ts = Date.now() / 1000;
 
       //ADD ABOVE DATA TO COLLECTION, TEXT IS PASSED IN
-      Boxes.insert({ user: user, time: ts, imageurl: url, linkurl: url, videourl: vidUrl, type: type.value, roomId: roomId });
+      Boxes.insert({ user: user, time: ts, imageurl: url, linkurl: url, videourl: url, type: type.value, roomId: roomId });
 
       //CLEAR THE INPUTS
       url = "";
