@@ -40,6 +40,12 @@ header {
 .content {
 	padding: 40px 0;
 }
+.more-link {
+	display: block;
+	text-align: center;
+	font-size: 32px;
+	text-decoration: none;
+}
 .entrybar {
 
 	padding: 20px 0;
@@ -111,5 +117,8 @@ footer.container {
 	input {
 		border: 2px solid $lightgrey;
 		margin-bottom: 10px;
+	}
+	.passwordForm {
+		display: none;
 	}
 }

@@ -13,18 +13,3 @@ Meteor.startup(function(){
      Session.set('displayMessage', null);
    }
  });
-
-function changeMediaTypes(){
-  $('#box-type').change(function(){
-     if ($('#box-type').val() == "image") {
-       $('#imageurl').show();
-       $('#submitBox').find('.input-type:not(#imageurl)').hide();
-     } else if ($('#box-type').val() == "video") {
-       $('#videourl').show();
-       $('#submitBox').find('.input-type:not(#videourl)').hide();
-     } else if ($('#box-type').val() == "link") {
-       $('#linkurl').show();
-       $('#submitBox').find('.input-type:not(#linkurl)').hide();
-     }
-  });
-}

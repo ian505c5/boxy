@@ -28,22 +28,39 @@ var make_okcancel_handler = function (options) {
   };
 };
 
-Template.create_room.events = {};
+Template.create_room.events = {
+  'change #private': function(event){
+    if ($('#private').is(':checked')){
+      isPrivate = true;
+      $('.passwordForm').show();
+    } else {
+      isPrivate = false;
+      $('.passwordForm').hide();
+    }
+  }
+};
+
+var isPrivate;
 
 Template.create_room.events[okcancel_events('#createRoom')] = make_okcancel_handler({
   ok: function (text, event) {
 
     var roomName = document.getElementById('roomName');
     var roomDesc = document.getElementById('roomDesc');
+    var roomPw = document.getElementById('roomPw');
     var user = Meteor.user().username;
     //VALIDATION LOL
     if(roomName.value != ""){
       var ts = Date.now() / 1000;
 
       //ADD ABOVE DATA TO COLLECTION, TEXT IS PASSED IN
-      Rooms.insert({ creator: user, name: roomName.value, description: roomDesc.value, time: ts }, function(err,result){
+      Rooms.insert({ creator: user, name: roomName.value, description: roomDesc.value, password: roomPw.value, privateRoom: isPrivate, time: ts }, function(err,result){
         Meteor.Router.to('/rooms/'+result);
       });
     } 
   }
 });
+
+Template.rooms.private = function(){
+  return this.privateRoom == true;
+}

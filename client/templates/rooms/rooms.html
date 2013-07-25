@@ -4,8 +4,11 @@
 			<ul class="rooms-list">
 				<h1>Rooms</h1>
 				{{#each rooms}}
-					<li><a href="rooms/{{_id}}">{{name}}</a></li>
+					<li><a class="room-link" href="rooms/{{_id}}">{{name}}</a></li>
 					<li><p>{{description}}</p></li>
+					<!-- {{#if private}}
+					<li><p>Private Room</p></li>
+					{{/if}} -->
 				{{/each}}
 			</ul>
 		</div>

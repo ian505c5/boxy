@@ -1,5 +1,5 @@
 <template name="boxes">
-	<div class="content">
+	<div class="content clearfix">
 		{{#each boxes}}
 			<div class="box">
 				{{#if typeIs "image"}}
@@ -14,4 +14,5 @@
 			</div>
 		{{/each}}
 	</div>
+	<a href="#" class="more-link">More Boxes</a>
 </template>

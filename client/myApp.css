@@ -46,85 +46,97 @@ header .main-nav li {
 }
 
 /* line 43, myApp.scss */
+.more-link {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+/* line 49, myApp.scss */
 .entrybar {
   padding: 20px 0;
   background: #333333;
 }
-/* line 47, myApp.scss */
+/* line 53, myApp.scss */
 .entrybar h4, .entrybar form {
   float: left;
 }
-/* line 50, myApp.scss */
+/* line 56, myApp.scss */
 .entrybar h4 {
   color: #FFF;
   font-size: 30px;
   margin-right: 20px;
 }
-/* line 55, myApp.scss */
+/* line 61, myApp.scss */
 .entrybar input, .entrybar select {
   float: left;
 }
-/* line 58, myApp.scss */
+/* line 64, myApp.scss */
 .entrybar input#videourl, .entrybar input#linkurl, .entrybar select#videourl, .entrybar select#linkurl {
   display: none;
 }
-/* line 64, myApp.scss */
+/* line 70, myApp.scss */
 .entrybar #submitBox input {
   margin-left: 10px;
 }
-/* line 67, myApp.scss */
+/* line 73, myApp.scss */
 .entrybar #submitBox select {
   width: 100px;
 }
 
-/* line 73, myApp.scss */
+/* line 79, myApp.scss */
 footer.container {
   padding: 20px 0;
 }
-/* line 75, myApp.scss */
+/* line 81, myApp.scss */
 footer.container ul {
   float: right;
 }
 
-/* line 81, myApp.scss */
+/* line 87, myApp.scss */
 .welcome-page .wrapper {
   width: 600px;
   margin: 0 auto;
   text-align: center;
 }
-/* line 82, myApp.scss */
+/* line 88, myApp.scss */
 .welcome-page .wrapper h1 {
   margin: 0;
 }
-/* line 89, myApp.scss */
+/* line 95, myApp.scss */
 .welcome-page .welcome-form {
   display: inline-block;
   padding: 20px;
 }
-/* line 92, myApp.scss */
+/* line 98, myApp.scss */
 .welcome-page .welcome-form input {
   border: 2px solid #6e6e6e;
   margin-bottom: 10px;
 }
 
-/* line 99, myApp.scss */
+/* line 105, myApp.scss */
 .create-room {
   width: 600px;
   margin: 0 auto;
   text-align: center;
 }
-/* line 103, myApp.scss */
+/* line 109, myApp.scss */
 .create-room h2 {
   margin-bottom: 0;
 }
-/* line 106, myApp.scss */
+/* line 112, myApp.scss */
 .create-room form {
   padding: 20px;
   display: inline-block;
   margin: 0 auto;
 }
-/* line 111, myApp.scss */
+/* line 117, myApp.scss */
 .create-room input {
   border: 2px solid #6e6e6e;
   margin-bottom: 10px;
+}
+/* line 121, myApp.scss */
+.create-room .passwordForm {
+  display: none;
 }
