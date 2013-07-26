@@ -1,8 +1,11 @@
-var handle = Meteor.subscribeWithPagination("boxes", Session.get('currentRoomId'), 8);
+Meteor.autorun(function(){
+	handle = Meteor.subscribeWithPagination("boxes", Session.get('currentRoomId'), 8);
+});
+
+var handle;
 
 Template.boxes.boxes = function(){
   //             WHERE CLAUSE    PARAMETERS
-  var curRoom = Session.get('currentRoomId');
   return Boxes.find({}, { sort: {time: -1} });
   
 };
